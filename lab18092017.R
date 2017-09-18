@@ -280,3 +280,49 @@ L = mtcars$am == 0
 L
 mtcars[L,]
 mtcars[L,]$mpg
+
+
+##Exercises 2. Vectors
+
+help(seq)
+
+v1 = 1.20
+v1
+
+
+#Q3
+v1 <- c("lable")
+v2 <- (1:30)
+v <- paste(v1,v2)
+v
+
+#Q4
+v1 <- c("fn")
+
+v2 <- (1:30)
+v <- paste(v1, v2, sep = "" )
+v
+
+#Q5
+set.seed(50)
+x <- sample(0:999, 10, replace=T)
+x
+y <- sample(0:999, 10, replace=T)
+y
+
+#(x1 + 2x2 − x3, x2 + 2x3 − x4, . . . , xn−2 + 2xn−1 − xn ).
+x
+x1 <- x[-length(x)]
+x1 <- x1[-length(x1)]
+x1
+
+x2 <- 2 * x[-1]
+x2
+x2 <- x2[-length(x2)]
+x2
+
+x3 <- x[-c(1,2)]
+x3
+
+ans <- x1 + x2 +x3
+ans
