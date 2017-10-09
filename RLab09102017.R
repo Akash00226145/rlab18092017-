@@ -78,3 +78,13 @@ iris_test = iris[-indexes,]
 data <- iris
 View(data)
 
+set.seed(12345)
+
+irisRand <- iris[order(runif(150)),]
+iris_train <- irisRand[1:125, ]
+iris_test <- irisRand[126:150, ]
+
+
+irisTreeModel <- C5.0(default ~ ., data = iris_train)
+
+ 
